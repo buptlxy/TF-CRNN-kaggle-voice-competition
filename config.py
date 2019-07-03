@@ -1,12 +1,13 @@
 import platform
 from pathlib import Path
-if platform.system() == 'Linux':
-    data_root = Path('/home/philip/data/Keyword_spot')
-else:
-    data_root = Path('D:/Keyword_spot')
-training_audio_data_folder = data_root / 'train/audio'
+#if platform.system() == 'Linux':
+    #data_root = Path('../working')
+#else:
+    #data_root = Path('D:/Keyword_spot')
+data_root = Path('../working')
+training_audio_data_folder = data_root / 'train/recordings'
 training_audio_data = training_audio_data_folder.glob("*/*.wav")
-training_img_data_folder = data_root / 'train/train_image'
+Straining_img_data_folder = data_root / 'train/train_image'
 training_img_data_folder.mkdir(parents=True, exist_ok=True)
 test_audio_data_folder = data_root / 'test/audio'
 test_audio_data = test_audio_data_folder.glob("*.wav")
